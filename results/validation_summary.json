@@ -1,0 +1,23 @@
+{
+  "video": {
+    "programs": [],
+    "streams": [
+      {
+        "codec_name": "h264",
+        "width": 1280,
+        "height": 720,
+        "r_frame_rate": "10/1"
+      }
+    ],
+    "format": {
+      "duration": "65.000000",
+      "size": "650021"
+    }
+  },
+  "test_count": 5,
+  "tests_passed": true,
+  "run_count": 10,
+  "all_completed": true,
+  "source_scope": "CPU PyBullet dynamics; synthetic sensors; fixed scene; no real-world experiment",
+  "publications_performed": false
+}

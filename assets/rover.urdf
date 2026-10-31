@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<robot name="sentinel_rover">
+  <link name="base_link">
+    <inertial><origin xyz="0 0 0"/><mass value="4"/><inertia ixx="0.045" ixy="0" ixz="0" iyy="0.060" iyz="0" izz="0.080"/></inertial>
+    <visual><geometry><box size="0.46 0.34 0.16"/></geometry><material name="blue"><color rgba="0.05 0.40 0.65 1"/></material></visual>
+    <collision><geometry><box size="0.46 0.34 0.16"/></geometry></collision>
+    <visual><origin xyz="0.13 0 0.115"/><geometry><box size="0.12 0.28 0.07"/></geometry><material name="light"><color rgba="0.45 0.95 0.85 1"/></material></visual>
+    <visual><origin xyz="0 0 0.18"/><geometry><cylinder radius="0.07" length="0.20"/></geometry><material name="mast"><color rgba="0.12 0.18 0.25 1"/></material></visual>
+    <visual><origin xyz="0 0 0.30"/><geometry><cylinder radius="0.09" length="0.05"/></geometry><material name="lidar"><color rgba="0.12 0.85 0.68 1"/></material></visual>
+  </link>
+  <link name="left_wheel">
+    <inertial><mass value="0.25"/><inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/></inertial>
+    <visual><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.10" length="0.06"/></geometry><material name="tire"><color rgba="0.08 0.10 0.13 1"/></material></visual>
+    <collision><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.10" length="0.06"/></geometry></collision>
+  </link>
+  <joint name="left_wheel_joint" type="continuous"><parent link="base_link"/><child link="left_wheel"/><origin xyz="0 0.20 -0.06"/><axis xyz="0 1 0"/><dynamics damping="0.001" friction="0"/></joint>
+  <link name="right_wheel">
+    <inertial><mass value="0.25"/><inertia ixx="0.001" ixy="0" ixz="0" iyy="0.001" iyz="0" izz="0.001"/></inertial>
+    <visual><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.10" length="0.06"/></geometry><material name="tire"/></visual>
+    <collision><origin rpy="1.57079632679 0 0"/><geometry><cylinder radius="0.10" length="0.06"/></geometry></collision>
+  </link>
+  <joint name="right_wheel_joint" type="continuous"><parent link="base_link"/><child link="right_wheel"/><origin xyz="0 -0.20 -0.06"/><axis xyz="0 1 0"/><dynamics damping="0.001" friction="0"/></joint>
+  <link name="front_caster"><inertial><mass value="0.05"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial><visual><geometry><sphere radius="0.04"/></geometry><material name="tire"/></visual><collision><geometry><sphere radius="0.04"/></geometry></collision></link>
+  <joint name="front_caster_joint" type="fixed"><parent link="base_link"/><child link="front_caster"/><origin xyz="0.18 0 -0.12"/></joint>
+  <link name="rear_caster"><inertial><mass value="0.05"/><inertia ixx="0.0001" ixy="0" ixz="0" iyy="0.0001" iyz="0" izz="0.0001"/></inertial><visual><geometry><sphere radius="0.04"/></geometry><material name="tire"/></visual><collision><geometry><sphere radius="0.04"/></geometry></collision></link>
+  <joint name="rear_caster_joint" type="fixed"><parent link="base_link"/><child link="rear_caster"/><origin xyz="-0.18 0 -0.12"/></joint>
+</robot>

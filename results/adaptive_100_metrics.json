@@ -1,0 +1,86 @@
+{
+  "policy": "adaptive",
+  "seed": 100,
+  "completed": true,
+  "terminal": "COMPLETE",
+  "completion_time_s": 42.6,
+  "simulated_time_s": 45.6,
+  "path_length_m": 15.258,
+  "min_obstacle_clearance_m": 0.2015,
+  "collision_sample_count": 0,
+  "collision_sample_period_s": 0.05,
+  "collision_physics_step_count": 0,
+  "collision_physics_period_s": 0.004166666666666667,
+  "hazard_violation_sample_count": 0,
+  "hazard_violation_time_s": 0.0,
+  "hazard_violation_episodes": 0,
+  "lidar_stop_time_s": 1.9,
+  "planning_calls": 4,
+  "inspections": [
+    {
+      "prediction": "NORMAL",
+      "confidence": 0.8286044973544974,
+      "action": "CONTINUE",
+      "features": [
+        43.01843514129539,
+        1.492253825753425,
+        0.07917826189205636,
+        2.22025120879496,
+        0.7683476501444724,
+        0.1977845181375468
+      ],
+      "probabilities": {
+        "NORMAL": 0.8286044973544974,
+        "OVERHEAT": 0.0011904761904761904,
+        "VIBRATION": 0.17020502645502644
+      },
+      "equipment": "A",
+      "time_s": 11.05
+    },
+    {
+      "prediction": "OVERHEAT",
+      "confidence": 0.9928289283174604,
+      "action": "ADD_EXCLUSION",
+      "features": [
+        68.21434830696936,
+        1.4049521817782948,
+        0.1419120010443467,
+        1.7896835654711185,
+        0.9295673603425184,
+        0.05473412851514322
+      ],
+      "probabilities": {
+        "NORMAL": 0.007171071682539572,
+        "OVERHEAT": 0.9928289283174604,
+        "VIBRATION": 0.0
+      },
+      "equipment": "B",
+      "time_s": 16.45
+    },
+    {
+      "prediction": "VIBRATION",
+      "confidence": 0.9888888888888889,
+      "action": "FLAG_MAINTENANCE",
+      "features": [
+        40.426528400193305,
+        1.8414160846274603,
+        0.41302033949725253,
+        2.011378714176345,
+        0.7067075083718534,
+        0.2749803917742642
+      ],
+      "probabilities": {
+        "NORMAL": 0.01111111111111111,
+        "OVERHEAT": 0.0,
+        "VIBRATION": 0.9888888888888889
+      },
+      "equipment": "C",
+      "time_s": 27.3
+    }
+  ],
+  "physics_hz": 240,
+  "control_hz": 20,
+  "lidar_rays": 121,
+  "localization": "PyBullet ground-truth pose, no SLAM",
+  "sensor_scope": "Synthetic remote equipment telemetry within inspection region; not visual recognition."
+}

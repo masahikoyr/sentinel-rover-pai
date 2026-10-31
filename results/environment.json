@@ -1,0 +1,13 @@
+{
+  "python": "3.12.14",
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.39",
+  "packages": {
+    "numpy": "2.3.5",
+    "scikit-learn": "1.8.0",
+    "pybullet": "3.2.7",
+    "Pillow": "12.3.0",
+    "reportlab": "4.4.9",
+    "matplotlib": "3.10.8",
+    "joblib": "1.5.3"
+  }
+}

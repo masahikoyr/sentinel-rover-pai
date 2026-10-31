@@ -1,0 +1,77 @@
+{
+  "classes": [
+    "NORMAL",
+    "OVERHEAT",
+    "VIBRATION"
+  ],
+  "features": [
+    "temperature_mean_C",
+    "temperature_std_C",
+    "vibration_rms",
+    "vibration_kurtosis",
+    "low_band_power_ratio",
+    "high_band_power_ratio"
+  ],
+  "train_samples": 1800,
+  "train_seed": 42,
+  "test_seed": 2026,
+  "stress_seed": 2027,
+  "confidence_threshold": 0.7,
+  "data_scope": "Synthetic IID holdout and synthetic shifted-noise stress only; no real-data claim.",
+  "test": {
+    "samples": 600,
+    "accuracy": 0.99,
+    "macro_f1": 0.98999899989999,
+    "confusion_matrix": [
+      [
+        199,
+        1,
+        0
+      ],
+      [
+        5,
+        195,
+        0
+      ],
+      [
+        0,
+        0,
+        200
+      ]
+    ],
+    "accepted_fraction": 0.9866666666666667,
+    "accuracy_when_accepted": 0.9949324324324325
+  },
+  "stress": {
+    "samples": 600,
+    "accuracy": 0.8466666666666667,
+    "macro_f1": 0.8456426707481658,
+    "confusion_matrix": [
+      [
+        164,
+        0,
+        36
+      ],
+      [
+        25,
+        144,
+        31
+      ],
+      [
+        0,
+        0,
+        200
+      ]
+    ],
+    "accepted_fraction": 0.42,
+    "accuracy_when_accepted": 0.996031746031746
+  },
+  "feature_importance": {
+    "temperature_mean_C": 0.46241493755467666,
+    "temperature_std_C": 0.0044588150811196384,
+    "vibration_rms": 0.267366292441992,
+    "vibration_kurtosis": 0.08482064912057563,
+    "low_band_power_ratio": 0.05160278763170126,
+    "high_band_power_ratio": 0.1293365181699348
+  }
+}
